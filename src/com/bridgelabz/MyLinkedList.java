@@ -22,6 +22,19 @@ public class MyLinkedList {
 			this.head.setNext(temp);
 		}
 	}
+	
+	 public void append(INode node) {
+			if (this.head == null) {
+				this.head = node;
+			}
+			if (this.tail == null) {
+				this.tail = node;
+			} else {
+				this.tail.setNext(node);
+				this.tail = node;
+			}
+		}
+
 
 	public void printNodes() {
 		StringBuilder nodes = new StringBuilder("Nodes keys: ");
