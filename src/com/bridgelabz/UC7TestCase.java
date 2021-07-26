@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class UC6TestCase {
+public class UC7TestCase {
 
 	public static void main(String[] args) {
 		INode myFirstNode = new MyNode<Integer>(56);
@@ -12,9 +12,11 @@ public class UC6TestCase {
 		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
 
-		myLinkedList.printNodes();
-		myLinkedList.popLast();
+		myLinkedList.search(mySecondNode);
 
+		if (myLinkedList.head.getNext().equals(mySecondNode)) {
+			System.out.println("Node has been found!");
+		}
 		myLinkedList.printNodes();
 
 	}

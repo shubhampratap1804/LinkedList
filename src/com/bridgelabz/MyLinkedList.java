@@ -2,8 +2,8 @@ package com.bridgelabz;
 
 public class MyLinkedList {
 
-	private INode head;
-	private INode tail;
+	INode head;
+	INode tail;
 
 	public MyLinkedList() {
 		this.head = null;
@@ -56,6 +56,18 @@ public class MyLinkedList {
 		tempNode = tempNode.getNext();
 		return tempNode;
 	}
+	
+	 public INode search(INode searchKey) {
+
+	        INode tempNode = this.head;
+	        while (tempNode != null) {
+	            if (tempNode == searchKey) {
+	                return tempNode;
+	            }
+	            tempNode = tempNode.getNext();
+	        }
+	        return null;
+	    }
 
 	public void printNodes() {
 		StringBuilder nodes = new StringBuilder("Nodes keys: ");
