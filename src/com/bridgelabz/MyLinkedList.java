@@ -22,19 +22,24 @@ public class MyLinkedList {
 			this.head.setNext(temp);
 		}
 	}
-	
-	 public void append(INode node) {
-			if (this.head == null) {
-				this.head = node;
-			}
-			if (this.tail == null) {
-				this.tail = node;
-			} else {
-				this.tail.setNext(node);
-				this.tail = node;
-			}
-		}
 
+	public void append(INode node) {
+		if (this.head == null) {
+			this.head = node;
+		}
+		if (this.tail == null) {
+			this.tail = node;
+		} else {
+			this.tail.setNext(node);
+			this.tail = node;
+		}
+	}
+
+	public void insert(INode myNode, INode node) {
+		INode tempNode = myNode.getNext();
+		myNode.setNext(node);
+		node.setNext(tempNode);
+	}
 
 	public void printNodes() {
 		StringBuilder nodes = new StringBuilder("Nodes keys: ");
