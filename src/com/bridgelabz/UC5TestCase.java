@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class UC4TestCase {
+public class UC5TestCase {
 
 	public static void main(String[] args) {
 		INode myFirstNode = new MyNode<Integer>(56);
@@ -9,10 +9,11 @@ public class UC4TestCase {
 
 		MyLinkedList myLinkedList = new MyLinkedList();
 		myLinkedList.add(myFirstNode);
+		myLinkedList.append(mySecondNode);
 		myLinkedList.append(myThirdNode);
 
 		myLinkedList.printNodes();
-		myLinkedList.insert(myFirstNode, mySecondNode);
+		myLinkedList.pop();
 
 		myLinkedList.printNodes();
 
