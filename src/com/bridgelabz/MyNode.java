@@ -1,28 +1,32 @@
 package com.bridgelabz;
 
-public class MyNode<K> {
+public class MyNode<K> implements INode<K> {
 
-	private K key;
-	private MyNode<K> next;
+	  private K key;
+	    private INode next;
 
-	public MyNode(K key) {
-		this.key = key;
-		this.next = null;
-	}
+	    public MyNode(K key){
+	        this.key = key;
+	        this.next = null;
+	    }
 
-	public void setKey(K key) {
-		this.key = key;
-	}
+	    @Override
+		public void setKey(K key) {
+			this.key = key;
+		}
 
-	public K getKey() {
-		return this.key;
-	}
+		@Override
+		public K getKey() {
+			return this.key;
+		}
 
-	public void setNext(MyNode next) {
-		this.next = next;
-	}
+		@Override
+		public void setNext(INode next) {
+			this.next = next;
+		}
 
-	public MyNode<K> getNext() {
-		return this.next;
-	}
+		@Override
+		public INode<K> getNext() {
+			return this.next;
+		}
 }
